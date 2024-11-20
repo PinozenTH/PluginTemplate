@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<!DOCTYPE xml>
+<project name="SimplePlugin" default="Build" basedir=".">
+    <xmlproperty file="pom.xml" prefix="pom" keeproot="false" />
+    <property name="project.version" value="${pom.version}"/>
+    <property name="project.name" value="${pom.name}"/>
+
+    <target name="Build">
+        <jar jarfile="./run/plugins/${project.name}-${project.version}.jar" basedir="./target/classes/" includes="**/*">
+        </jar>
+    </target>
+
+</project>
